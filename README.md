@@ -2,9 +2,7 @@
 
 Configured to deploy a TensorFlow model to AWS Lambda using the Serverless framework.
 
-by: Mike Moritz
-
-updates by: Andreas Merentitis (ubuntu 20.04, py36)
+by: Andreas Merentitis
 
 ![relative path 6](/bluriness_pie.png?raw=true "bluriness_pie.png")
 ![relative path 1](/model_train.png?raw=true "model_train.png")
@@ -28,7 +26,7 @@ Make sure you have AWS access key and secrete keys setup locally, following this
 ### Download the code locally
 
 ```  
-serverless create --template-url https://github.com/AndreasMerentitis/TfLambdaDemo --path tf-lambda
+serverless create --template-url https://github.com/AndreasMerentitis/SkLambdaDemo-logistic --path sk-lambda
 ```
 
 ### Update S3 bucket to unique name
@@ -43,7 +41,7 @@ In serverless.yml:
 
 
 ```
-cd tf-lambda
+cd sk-lambda
 
 npm install
 
@@ -51,11 +49,9 @@ sudo serverless deploy --stage dev
 
 curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/upload
 
-curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/train
+curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/trainsklearn
 
-curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/infer -d '{"epoch": "1556995767", "input": {"age": ["34"], "workclass": ["Private"], "fnlwgt": ["357145"], "education": ["Bachelors"], "education_num": ["13"], "marital_status": ["Married-civ-spouse"], "occupation": ["Prof-specialty"], "relationship": ["Wife"], "race": ["White"], "gender": ["Female"], "capital_gain": ["0"], "capital_loss": ["0"], "hours_per_week": ["50"], "native_country": ["United-States"], "income_bracket": [">50K"]}}'
-
-curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/infer -d '{"epoch": "1556995767", "input": {"age": ["34"], "workclass": ["Private"], "fnlwgt": ["357145"], "education": ["Bachelors"], "education-num": ["13"], "marital-status": ["Married-civ-spouse"], "occupation": ["Prof-specialty"], "relationship": ["Wife"], "race": ["White"], "sex": ["Female"], "capital-gain": ["0"], "capital-loss": ["0"], "hours-per-week": ["50"], "native-country": ["United-States"], "income": [">50K"]}}'
+curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/infersklearn -d '{"epoch": "1556995767", "input": {"age": ["34"], "workclass": ["Private"], "fnlwgt": ["357145"], "education": ["Bachelors"], "education-num": ["13"], "marital-status": ["Married-civ-spouse"], "occupation": ["Prof-specialty"], "relationship": ["Wife"], "race": ["White"], "sex": ["Female"], "capital-gain": ["0"], "capital-loss": ["0"], "hours-per-week": ["50"], "native-country": ["United-States"], "income": [">50K"]}}'
 ```
 
 ### Clean up (remove deployment) 

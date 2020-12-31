@@ -1,11 +1,10 @@
-# Serverless Machine Learning on AWS Lambda with TensorFlow
+# Serverless Machine Learning on AWS Lambda with scikit-learn
 
-Configured to deploy a TensorFlow model to AWS Lambda using the Serverless framework.
+Configured to deploy a scikit-learn model to AWS Lambda using the Serverless framework.
+We use a lambda to downlad the data, another lambda to prepare the feature and train,
+and a final lambda for inference with the trained model. 
 
 by: Andreas Merentitis
-
-![relative path 6](/bluriness_pie.png?raw=true "bluriness_pie.png")
-![relative path 1](/model_train.png?raw=true "model_train.png")
 
 ### Prerequisites
 

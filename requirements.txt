@@ -1,0 +1,10 @@
+absl-py==0.7.1
+idna==2.8
+joblib==0.16.0
+numpy==1.16.3
+pandas==1.0.5
+pbr==5.2.0
+requests==2.24.0
+six==1.12.0
+urllib3==1.24.2
+

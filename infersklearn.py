@@ -151,7 +151,7 @@ def infersklearnHandler(event, context):
         predictions_batch.append(predictions.tolist())
 
     logging.warning('predictions_batch is %s', predictions_batch)
-    predictions_batch_dict3 = {'predictions': predictions_batch}
+    predictions_batch_dict = {'predictions': predictions_batch}
     
     if not run_from_queue: 
         logging.warning('Return from normal execution')

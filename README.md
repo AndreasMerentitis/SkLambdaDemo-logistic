@@ -52,6 +52,8 @@ curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/upload
 curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/trainsklearn
 
 curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/infersklearn -d '{"epoch": "1556995767", "input": {"age": ["34"], "workclass": ["Private"], "fnlwgt": ["357145"], "education": ["Bachelors"], "education-num": ["13"], "marital-status": ["Married-civ-spouse"], "occupation": ["Prof-specialty"], "relationship": ["Wife"], "race": ["White"], "sex": ["Female"], "capital-gain": ["0"], "capital-loss": ["0"], "hours-per-week": ["50"], "native-country": ["United-States"], "income": [">50K"]}}'
+
+curl -X POST https://wd24geyt86.execute-api.us-east-1.amazonaws.com/dev/infersklearn -d '{"epoch": "1556995767", "input": {"age": ["44"], "workclass": ["Private"], "fnlwgt": ["357145"], "education": ["Masters"], "education-num": ["13"], "marital-status": ["Never-married"], "occupation": ["Exec-managerial"], "relationship": ["Not-in-family"], "race": ["White"], "sex": ["Male"], "capital-gain": ["15000"], "capital-loss": ["50"], "hours-per-week": ["80"], "native-country": ["United-States"], "income": [">50K"]}}'
 ```
 
 ### Clean up (remove deployment) 

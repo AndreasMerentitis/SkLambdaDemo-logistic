@@ -65,6 +65,12 @@ aws s3 rm s3://serverless-ml-1 --recursive
 sudo serverless remove --stage dev 
 ```
 
+### Check that the Lambda functions are removed 
+
+```
+aws lambda list-functions --region us-east-1
+```
+
 # Using data and extending the basic idea from these sources:
 * https://github.com/mikepm35/TfLambdaDemo
 * https://medium.com/@mike.p.moritz/running-tensorflow-on-aws-lambda-using-serverless-5acf20e00033

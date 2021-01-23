@@ -3,7 +3,7 @@
 Configured to deploy a scikit-learn model to AWS Lambda using the Serverless framework.
 We use a Lambda to downlad the data, another Lambda to prepare the features and train,
 and a final Lambda for inference with the trained model. Scikit-learn is loaded from 
-a precompiled Lambda layer.
+a precompiled Lambda layer (which is why deployment is done in us-east-1).
 
 by: Andreas Merentitis
 

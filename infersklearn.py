@@ -3,22 +3,19 @@ try:
 except ImportError:
   pass
 
-import os
-import json
-import time
 import functools
+import json
+import logging
+import os
+import pickle
 import tarfile
-
-from joblib import dump
+import time
 
 import boto3
-import pandas as pd
-from sklearn.linear_model import LogisticRegression
-import pickle
-
 import census_data
-
-import logging
+import pandas as pd
+from joblib import dump
+from sklearn.linear_model import LogisticRegression
 
 logger = logging.getLogger()
 logger.setLevel(logging.WARNING)

@@ -3,14 +3,12 @@ try:
 except ImportError:
   pass
 
-import os
 import json
+import logging
+import os
 import time
 
-import logging
-
 import boto3
-
 import census_data
 
 

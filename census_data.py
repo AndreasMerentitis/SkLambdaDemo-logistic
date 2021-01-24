@@ -1,14 +1,15 @@
-import os
-import requests
 import json
+import logging
+import os
+import pickle
+
+import boto3
 import numpy as np
 import pandas as pd
-from sklearn.datasets.base import Bunch
-from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder
+import requests
 from sklearn.compose import make_column_transformer
-import pickle
-import boto3
-import logging
+from sklearn.datasets.base import Bunch
+from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
 
 DATA_URL = 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult'
 TRAINING_FILE = 'adult.data'

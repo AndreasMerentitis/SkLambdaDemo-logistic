@@ -3,11 +3,8 @@ service: sklambdademo
 provider:
   name: aws
   region: us-east-1
-  runtime: python3.6
+  runtime: python3.7
   stage: dev
-  credentials:
-    accessKeyId: 
-    secretAccessKey: 
 
   iamRoleStatements:
     - Effect: Allow
@@ -50,7 +47,9 @@ functions:
   upload:
     handler: upload.uploadHandler
     layers:
-      - arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
+      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:1
+      - arn:aws:lambda:us-east-1:446751924810:layer:python-3-7-scikit-learn-0-23-1:2
+      #- arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
     timeout: 30
     memorySize: 3008
     events:
@@ -61,8 +60,9 @@ functions:
   trainsklearn:
     handler: trainsklearn.trainsklearnHandler
     layers:
-      #- arn:aws:lambda:us-east-1:446751924810:layer:python-3-7-scikit-learn-0-23-1:2
-      - arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
+      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:1
+      - arn:aws:lambda:us-east-1:446751924810:layer:python-3-7-scikit-learn-0-23-1:2
+      #- arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
     memorySize: 3008
     timeout: 30
     events:
@@ -73,7 +73,9 @@ functions:
   infersklearn:
     handler: infersklearn.infersklearnHandler
     layers:
-       - arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
+      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:1
+      - arn:aws:lambda:us-east-1:446751924810:layer:python-3-7-scikit-learn-0-23-1:2
+      #- arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
     memorySize: 3008
     timeout: 30
     events:

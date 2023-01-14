@@ -69,7 +69,7 @@ curl -X POST https://wd24geyt86.execute-api.us-east-1.amazonaws.com/dev/inferskl
 ```
 aws s3 rm s3://serverless-ml-1 --recursive
 
-sudo serverless remove --stage dev 
+serverless remove --stage dev 
 ```
 
 ### Check that the Lambda functions are removed 

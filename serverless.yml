@@ -47,7 +47,7 @@ functions:
   upload:
     handler: upload.uploadHandler
     layers:
-      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:1
+      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:10
       - arn:aws:lambda:us-east-1:446751924810:layer:python-3-7-scikit-learn-0-23-1:2
       #- arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
     timeout: 30
@@ -60,7 +60,7 @@ functions:
   trainsklearn:
     handler: trainsklearn.trainsklearnHandler
     layers:
-      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:1
+      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:10
       - arn:aws:lambda:us-east-1:446751924810:layer:python-3-7-scikit-learn-0-23-1:2
       #- arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
     memorySize: 3008
@@ -73,7 +73,7 @@ functions:
   infersklearn:
     handler: infersklearn.infersklearnHandler
     layers:
-      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:1
+      - arn:aws:lambda:us-east-1:113088814899:layer:Klayers-python37-numpy:10
       - arn:aws:lambda:us-east-1:446751924810:layer:python-3-7-scikit-learn-0-23-1:2
       #- arn:aws:lambda:us-east-1:446751924810:layer:python-3-6-scikit-learn-0-22-0:4
     memorySize: 3008

@@ -52,7 +52,9 @@ cd sk-lambda
 
 npm install
 
-sudo serverless deploy --stage dev
+export BUCKET=serverless-ml-1
+
+serverless deploy --stage dev
 
 curl -X POST https://t3r9pasalk.execute-api.eu-west-1.amazonaws.com/dev/upload
 
